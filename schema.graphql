@@ -72,6 +72,7 @@ type UserOperationEvent @entity(immutable: true) {
   success: Boolean! # bool
   actualGasCost: BigInt! # uint256
   actualGasUsed: BigInt! # uint256
+  from: Bytes! # address
   blockNumber: BigInt!
   blockTimestamp: BigInt!
   transactionHash: Bytes!
