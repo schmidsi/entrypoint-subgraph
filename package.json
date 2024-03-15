@@ -4,7 +4,7 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ base-entrypoint --version-label $(git rev-parse HEAD)",
+    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ base-entrypoint --version-label $(git rev-parse HEAD | awk '{print substr($0, 1, 7)}')",
     "create-local": "graph create --node http://localhost:8020/ base-entrypoint",
     "remove-local": "graph remove --node http://localhost:8020/ base-entrypoint",
     "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 base-entrypoint",
